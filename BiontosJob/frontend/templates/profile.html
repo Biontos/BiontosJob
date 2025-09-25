@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Профиль пользователя</h1>
+
+<p>ID: {{ user_id }}</p>
+<p>Email: {{ email }}</p>
+<p>Имя: {{ full_name }}</p>
+{% if profile_image %}
+    <img src="/static/img/profiles/{{ profile_image }}" alt="Profile Image" width="100">
+{% endif %}
+
+<form action="/profile/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Загрузить фото</button>
+</form>
+
+<p><a href="/dashboard">Перейти в кабинет</a></p>
+<p><a href="/auth/logout">Выйти</a></p>
+{% endblock %}

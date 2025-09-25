@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Личный кабинет</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Мои смены</h5>
+                <p class="card-text">Просмотр активных и завершённых смен.</p>
+                <a href="/shifts" class="btn btn-outline-primary btn-sm">Открыть</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Выплаты</h5>
+                <p class="card-text">Детализация по часам, сменам и неделям.</p>
+                <a href="/payouts" class="btn btn-outline-success btn-sm">Открыть</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
